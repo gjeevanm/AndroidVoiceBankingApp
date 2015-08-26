@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+       
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextadduserid2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="Enter 3rd party Account-ID"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp">
+
+        <requestFocus />
+    </EditText>
+
+    
+    <EditText
+        android:id="@+id/editTextaddAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter amount to be transfered"
+        android:inputType="number"
+         android:layout_marginBottom="50dp"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/editTextCurrentBalance"
+        android:layout_width="match_parent"
+        android:hint="Your account balance"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/buttonTransfer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="90dp"
+        android:text="Submit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+</LinearLayout>

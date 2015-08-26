@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+         >
+        
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textView1"
+            android:textStyle="bold"
+            android:textColor="#B71C1C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome\nTo Scope International Mobile App"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:text="Enter Basic Details"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextUserID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AccountID (Max 20 chars)"
+            android:maxLength="20"
+             >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewCheckAvailability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#0D47A1"
+            android:layout_gravity="left"
+            android:text="Better Check for availability!"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email ID (Max 40 chars)"
+            android:maxLength="40"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name(Max 50 chars)"
+            android:maxLength="50"
+             />
+
+        <EditText
+            android:id="@+id/editTextPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password (Max 8 chars)"
+            android:maxLength="8"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextConfirmPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="8"
+            android:hint="ReType Password (Max 8 chars)"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:hint="Mobile Number (10 digits)"
+            android:inputType="numberPassword" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:text="Note: All UserIDs and EmailIDs must be unique"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/buttonNextRegForm"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="50dp"
+            style="@style/MyCustomButtonStyle1"
+            android:text="Regsiter" />
+
+    </LinearLayout>
+
+</ScrollView>
