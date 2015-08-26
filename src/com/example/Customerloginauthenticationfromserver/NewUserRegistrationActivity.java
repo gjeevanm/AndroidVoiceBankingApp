@@ -161,7 +161,7 @@ $
 			String userid2 =  userIDEditText.getText().toString();
 			
 			MyHttpAsycTaskCheck obj = new MyHttpAsycTaskCheck();
-			obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/check/"+userid2);
+			obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/check/"+userid2);
 			break;
 		
 		}	

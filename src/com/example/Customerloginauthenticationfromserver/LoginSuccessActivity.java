@@ -73,7 +73,7 @@ public class LoginSuccessActivity extends Activity implements OnClickListener
 	Button buttonSavePic;
 	TextView tvPicStatus;
 	TextToSpeech t1;
-	String userid, fullname,accountbalance;
+	String userid, fullname;
 	String speech="Welcome";
 	ProgressDialog pd;
 	Bitmap bm;
@@ -103,7 +103,10 @@ public class LoginSuccessActivity extends Activity implements OnClickListener
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				// TODO Auto-generated method stub
-				
+				String toSpeak = speech+userid;
+	            Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+	            t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+			
 			}
 			
 			@Override
@@ -117,9 +120,7 @@ public class LoginSuccessActivity extends Activity implements OnClickListener
 			@Override
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
-				String toSpeak = speech+userid;
-	            Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
-	            t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+
 				}
 		});	
 		
@@ -172,18 +173,18 @@ public class LoginSuccessActivity extends Activity implements OnClickListener
 				
 			case R.id.buttonSavePic:
 				
-				//update the Student table in External Database by adding the pic field
+				//update the Customer table in External Database by adding the pic field
 				//sending image data to RESTFul Web Service
 				
 				MyHttpAsycTaskSavePic obj = new MyHttpAsycTaskSavePic();
-				obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/savepic");
+				obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/savepic");
 				
 				break;
 				
 			case R.id.textViewEdit:
 				
 				MyHttpAsycTaskGetDetails obj2 = new MyHttpAsycTaskGetDetails();
-				obj2.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/myGetDetails/"+userid);
+				obj2.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/myGetDetails/"+userid);
 				break;
 				
 			case R.id.micButton:
@@ -249,14 +250,14 @@ public class LoginSuccessActivity extends Activity implements OnClickListener
 	                    		
 	                    		Intent i1=new Intent(LoginSuccessActivity.this,CheckBalance.class);
 		                    	//i1.putExtra("fullname", fullname);
-		                    //	i1.putExtra("accountbalance", accountbalance);
+		                //    i1.putExtra("accountbalance", accountbalance);
 	                    		i1.putExtra("userid", userid);
 		                    	startActivity(i1);
 	                    	//startActivity(new Intent(LoginSuccessActivity.this,CheckBalance.class));
 	                    }
 	                    	else
 		                    	 mostLikelyThingHeard=matches.get(0);
-		                    	if(mostLikelyThingHeard.toUpperCase().equals("TRANSACTIONS"))
+		                    	if(mostLikelyThingHeard.toUpperCase().equals("DETAILS"))
 		                    {
 		                    		
 		                    		Intent i8=new Intent(LoginSuccessActivity.this,TransactionHistory.class);
@@ -443,14 +444,16 @@ public class LoginSuccessActivity extends Activity implements OnClickListener
 						
 						fullname = (String)json.get("fullname");
 						userid=(String)json.getString("userid");
+						//accountbalance=json.getString("accountbalance");
 						//accountbalance=(String)json.get("accountbalance");
 						Intent tran=new Intent(LoginSuccessActivity.this,Transfers.class);
 						tran.putExtra("userid", userid);
+						//tran.putExtra("accountbalance",accountbalance);
 						startActivity(tran);
 		
 						
 						
-						Intent editIn = new Intent(LoginSuccessActivity.this, EditCustomerActivity.class);
+						Intent editIn = new Intent(LoginSuccessActivity.this,EditCustomerActivity.class);
 							editIn.putExtra("userid",userid);
 							editIn.putExtra("fullname", fullname);
 		

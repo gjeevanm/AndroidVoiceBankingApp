@@ -92,7 +92,7 @@ public class EditCustomerActivity extends Activity implements OnClickListener
 		}
 
 		MyHttpAsycTaskUpdateDetails obj = new MyHttpAsycTaskUpdateDetails();
-		obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/updateMyDetails/" + userid + "/" + fullnameStr2 + "/"  + phoneStr + "/" + emailStr);		
+		obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/updateMyDetails/" + userid + "/" + fullnameStr2 + "/"  + phoneStr + "/" + emailStr);		
 	}
 
 	class MyHttpAsycTaskUpdateDetails extends AsyncTask<String, Void, String>

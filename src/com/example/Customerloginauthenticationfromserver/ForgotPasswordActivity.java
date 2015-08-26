@@ -63,7 +63,7 @@ public class ForgotPasswordActivity extends Activity implements OnClickListener
 		}
 		
 		MyHttpAsycTaskRecoverPwd obj = new MyHttpAsycTaskRecoverPwd();
-		obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/phoneVerify/"+phoneNumber);
+		obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/phoneVerify/"+phoneNumber);
 		
 	}
 

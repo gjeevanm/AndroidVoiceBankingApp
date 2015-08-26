@@ -86,7 +86,7 @@ public class Registration extends Activity implements OnClickListener{
 			 //Toast.makeText(this, jsonFormOfStudent, Toast.LENGTH_LONG).show();
 			 
 			 MyHttpAsycTask obj = new MyHttpAsycTask();
-			 obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/register");
+			 obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/register");
 			 
 		 }
 		

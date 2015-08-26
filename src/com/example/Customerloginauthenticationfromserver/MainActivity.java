@@ -101,7 +101,7 @@ public class MainActivity extends Activity implements OnClickListener
 				
 				
 				MyHttpAsycTaskLogin obj = new MyHttpAsycTaskLogin();
-				obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/"+userid+"/"+pwd);
+				obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/"+userid+"/"+pwd);
 				
 				etLoginUserID.setText("");
 				etLoginPwd.setText("");
@@ -202,7 +202,7 @@ public class MainActivity extends Activity implements OnClickListener
 						
 						//Now retrieving the profile pic separately
 						MyHttpAsycTaskGetPic obj = new MyHttpAsycTaskGetPic();
-						obj.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/readImage/"+userid);
+						obj.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/readImage/"+userid);
 						
 					}
 					catch (final Exception e)

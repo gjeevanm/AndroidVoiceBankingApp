@@ -107,7 +107,7 @@ public class CheckBalance extends Activity {
 		i.setAction(Intent.ACTION_VIEW);
 	
 		MyHttpAsycTaskGetDetails obj2 = new MyHttpAsycTaskGetDetails();
-		obj2.execute("http://"+ IPAddressHolder.IPAddress +":12113/forAndroidClientServerStudentAuthentication/rest/Customer/myGetBalance/"+userid);
+		obj2.execute("http://"+ IPAddressHolder.IPAddress +":38611/forAndroidClientServerStudentAuthentication/rest/Customer/myGetBalance/"+userid);
 	
 	}
 	class MyHttpAsycTaskGetDetails extends AsyncTask<String, Void, String>
@@ -186,17 +186,6 @@ public class CheckBalance extends Activity {
 						JSONObject json = new JSONObject(result);
 						//Toast.makeText(, "Json is available", Toast.LENGTH_LONG);
 						Toast.makeText(getApplicationContext(), json.toString(), Toast.LENGTH_LONG).show();
-						//JSONObject jsonObject = (new JSONObject(result)
-					//textViewCheckBalance.setText(json.toString());
-						// jj = json.toString();
-						//CheckBalance
-					//jj=	json.get(accountbalance).toString();
-						//accountbalance = (String)json.get("accountbalance");
-						
-						//textViewCheckBalance.setText(jj);
-					
-					//	json.toString()
-						//jj=json.keys();
 				jj=	json.getString("accountbalance");
 					
 						//jj=String.valueOf(json);
