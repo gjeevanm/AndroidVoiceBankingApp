@@ -2,8 +2,8 @@ package model;
 
 public interface IPAddressHolder {
 	
-	//String IPAddress = "192.168.1.4";
-	String IPAddress = "192.168.43.130";
+	String IPAddress = "192.168.1.6";
+	//String IPAddress = "192.168.43.130";
 	//for BSNL, Hathway, etc
 	//String IPAddress = "10.0.2.2"; //for emulator
 	//use ipconfig to know the latest
